@@ -1,0 +1,18 @@
+:root {
+	/* Colors */
+	--pink: #D6A2AC;
+	--mint: #CFE3D6;
+	--black: #1E1C1B;
+	--black2: #0A0A0A;
+	--white: #FFFFFF;
+
+	/* Spacing scale */
+	--sp-1: 10px;
+	--sp-2: 12px;
+	--sp-3: 16px;
+	--sp-4: 24px;
+	--sp-5: 32px;
+
+	/* Shadows (used on cards later) */
+	--shadow-lg: 0 10px 24px rgba(0, 0, 0, .25);
+}

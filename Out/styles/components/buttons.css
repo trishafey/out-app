@@ -1,0 +1,37 @@
+/* base */
+.btn {
+	display: inline-block;
+	border-radius: 9999px;
+	padding: 18px 24px;
+	font-size: 18px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color .25s ease, color .25s ease, transform .065s ease;
+}
+
+/* existing dark primary (keep as-is) */
+.btn-primary {
+	background: var(--black);
+	color: var(--white);
+}
+
+/* NEW: white button for dark backgrounds */
+.btn-primary--on-dark {
+	background: var(--white);
+	color: var(--black);
+}
+
+.btn-primary--on-dark:hover {
+	background: var(--mint);
+	/* light green on hover */
+	color: var(--black);
+}
+
+.btn-primary--on-dark:focus-visible {
+	outline: 0;
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.btn:active {
+	transform: translateY(1px);
+}

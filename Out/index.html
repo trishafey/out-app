@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Out</title>
+
+	<!-- Main CSS bundle -->
+	<link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+
+	<!-- SPLASH -->
+	<section id="splash" class="screen splash">
+		<img class="splash__logo" src="assets/out-logo-long-white.svg" alt="Out" width="160" height="48" />
+	</section>
+
+	<!-- SIGN-IN -->
+	<section id="signin" class="screen signin" hidden>
+		<div class="signin__copy">
+			<p class="signin__kicker">Let’s put an end to…</p>
+			<h1 class="signin__headline">
+				<span class="rotator-words">planning dates.</span>
+			</h1>
+		</div>
+
+		<div class="signin__spacer" aria-hidden="true"></div>
+
+		<div class="signin__bottom">
+			<div class="signin__brand">
+				<img class="signin__mark" src="assets/out-logo-o-colour.svg" alt="Out logo" width="44" height="44" />
+				<p class="signin__sub">Welcome to Out</p>
+			</div>
+
+			<div class="signin__cta">
+				<button id="getStartedBtn" class="btn btn-primary">Get started</button>
+				<a href="#" class="signin__link">Have an account? Log in</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- INTRO / ONBOARDING -->
+	<section id="intro" class="screen intro" hidden>
+
+		<!-- SLIDE 1 -->
+		<div class="intro__slide intro__slide--active">
+			<div class="intro__art">
+				<img src="assets/out-logo-o-white.svg" alt="Out logo" class="intro__imgsmall intro__img--o200" />
+			</div>
+		
+			<div class="intro__content">
+				<div class="intro__copy">
+					<h2 class="intro__title">Meet your <span class="intro__accent">AI matchmaker</span></h2>
+					<p class="intro__body">Real dates. Zero swiping.</p>
+				</div>
+
+				<div class="intro__footer">
+					<div class="dots dots--on-dark" aria-label="progress">
+						<span class="dot dot--active"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
+					</div>
+					<button class="btn btn-primary--on-dark intro__btn" data-next>Continue</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- SLIDE 2 -->
+		<div class="intro__slide intro__slide--bleed">
+			<div class="intro__art">
+				<div class="intro__art--cover" style="background-image:url('assets/chat-o.svg');"></div>
+			</div>
+			<div class="intro__content">
+				<div class="intro__copy">
+					<h2 class="intro__title">It learns you</h2>
+					<p class="intro__body">Be honest. No judgment. The more you chat and share, the better <span class="intro__accent">Out</span> matches.</p>
+				</div>
+				<div class="intro__footer">
+					<div class="dots dots--on-dark" aria-label="progress">
+						<span class="dot"></span><span class="dot dot--active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+					</div>
+					<button class="btn btn-primary--on-dark intro__btn" data-next>Continue</button>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- SLIDE 3 -->
+		<div class="intro__slide intro__slide--bleed">
+			<div class="intro__art">
+				<div class="intro__art--cover" style="background-image:url('assets/no-searching.svg');"></div>
+			</div>
+
+			<div class="intro__content">
+				<div class="intro__copy">
+					<h2 class="intro__title">No swiping. No searching.</h2>
+					<p class="intro__body"><span class="intro__accent">Out</span> does it for you. It talks to other members’ matchmakers to find your best fit.</p>
+				</div>
+				<div class="intro__footer">
+					<div class="dots dots--on-dark" aria-label="progress">
+						<span class="dot"></span><span class="dot"></span><span class="dot dot--active"></span><span class="dot"></span><span class="dot"></span>
+					</div>
+					<button class="btn btn-primary--on-dark intro__btn" data-next>Continue</button>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- SLIDE 4 -->
+		<div class="intro__slide">
+			<div class="intro__art">
+				<img src="assets/date-planned-o.png" alt="Planned date card" class="intro__imgsmall" />
+			</div>
+
+			<div class="intro__content">
+				<div class="intro__copy">
+					<h2 class="intro__title"><span class="intro__accent">Out</span> plans the date.</h2>
+					<p class="intro__body">You just show up. We handle the time, place, and reservation.</p>
+				</div>
+
+				<div class="intro__footer">
+					<div class="dots dots--on-dark" aria-label="progress">
+						<span class="dot"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
+						<span class="dot dot--active"></span>
+						<span class="dot"></span>
+					</div>
+					<button class="btn btn-primary--on-dark intro__btn" data-next>Continue</button>
+				</div>
+			</div>
+		</div>
+
+		<!-- SLIDE 5 -->
+		<div class="intro__slide intro__slide--bleed">
+			<div class="intro__art">
+				<div class="intro__art--cover" style="background-image:url('assets/group-date.svg');"></div>
+			</div>
+
+			<div class="intro__content">
+				<div class="intro__copy">
+					<h2 class="intro__title">Date solo or with a group.</h2>
+					<p class="intro__body">Try a group date. Everyone invited is a match on paper. You see if there’s a spark in real life. <span class="intro__accent">Get Out of the apps.</span></p>
+				</div>
+				<div class="intro__footer">
+					<div class="dots dots--on-dark" aria-label="progress">
+						<span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot dot--active"></span>
+					</div>
+					<button class="btn btn-primary--on-dark intro__btn" data-next>Meet your matchmaker</button>
+				</div>
+			</div>
+		</div>
+
+
+	</section>
+
+	<!-- JS -->
+	<script src="scripts/app.js"></script>
+</body>
+
+</html>

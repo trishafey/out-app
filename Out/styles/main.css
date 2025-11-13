@@ -1,0 +1,14 @@
+/* styles/main.css */
+@import url("./tokens.css");
+@import url("./base.css");
+@import url("./utilities.css");
+
+/* components */
+@import url("./components/buttons.css");
+@import url("./components/dots.css");
+
+/* screens */
+@import url("./screens/splash.css");
+@import url("./screens/signin.css");
+/* <-- was welcome.css, change to signin.css */
+@import url("./screens/intro.css");

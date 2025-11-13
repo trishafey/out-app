@@ -1,0 +1,137 @@
+/* ===== INTRO CANVAS ===== */
+.intro{
+  position: fixed;
+  inset: 0;
+  background: #121111;
+  color: #F3F3F3;
+  overflow: hidden;
+}
+
+/* ===== SLIDE SHELL ===== */
+.intro__slide{
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-rows: 1fr auto auto;   /* art / copy / footer */
+  gap: 48px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(12px);
+  transition: opacity .35s ease, transform .35s ease;
+}
+.intro__slide.intro__slide--active{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+/* ===== ART ===== */
+.intro__art{
+  position: relative;          /* lets child absolutely fill */
+  padding: 0;
+  min-height: var(--hero, 56vh);
+  overflow: hidden;            /* crop top when needed */
+  display: flex;               /* center art content */
+  align-items: center;         /* vertical centering */
+  justify-content: center;     /* horizontal centering (works with margin:auto too) */
+ 
+}
+
+/* Standard images (contain) */
+.intro__img{
+  width: 100%;
+  height: auto;
+  max-height: 56vh;
+  object-fit: contain;
+  display: block;
+}
+
+/* Smaller images (logo, date card @ ~70%) */
+.intro__imgsmall{
+  width: 50%;
+  height: auto;
+  max-height: 56vh;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;        /* center horizontally within .intro__art */
+}
+
+/* ===== COVER CROPPING MODES (slides 3 & 5) ===== */
+.intro__art--cover{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);     /* center the strip */
+  width: 100vw;                    /* span viewport width by default */
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;          /* fill & crop */
+  background-position: bottom center; /* default crop from top */
+}
+
+/* --- helpers for bleed backgrounds --- */
+.intro__art--pin-bottom {            /* keep the bottom edge visible */
+  background-position: center bottom !important;
+}
+
+/* mild zoom so sides + a bit of the top get cropped */
+.intro__art--grow-120 {              /* adjust 110–130 if you want */
+  background-size: auto 120% !important;
+}
+
+/* Overscan kills tiny side gutters on iOS/Safari when zoom/layout shifts */
+.intro__art--overscan{ width:112vw; }
+@media (min-width:430px){ .intro__art--overscan{ width:110vw; } }
+
+/* Optional anchors */
+.bg-top    { background-position: top    center; }
+.bg-bottom { background-position: bottom center; }
+
+/* ===== COPY ===== */
+.intro__content{
+  display: contents; /* let copy + footer sit in grid rows */
+}
+.intro__copy{
+  width: min(680px, 100%);
+  margin-inline: auto;
+  padding-inline: var(--sp-5);
+}
+
+.intro__title{
+  margin: 0 0 12px;
+  font-size: clamp(26px, 5vw, 34px);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+.intro__accent{ color: var(--pink); }
+.intro__body{
+  margin: 0;
+  font-size: clamp(16px, 3.6vw, 20px);
+  line-height: 1.5;
+  color: #DCDCDC;
+}
+
+/* ===== FOOTER (dots + CTA) ===== */
+.intro__footer{
+  margin-top: 30px;                      /* gap between copy and dots */
+  display: grid;
+  gap: 16px;                             /* dots ↔ button spacing */
+  align-content: end;
+  padding: 0 var(--sp-5) calc(18px + env(safe-area-inset-bottom));
+}
+.dots{ display:flex; justify-content:center; gap:10px; }
+
+.intro__btn{
+  width: min(720px, 100%);
+  justify-self: center;
+}
+
+/* ===== SHORT SCREENS ===== */
+@media (max-height: 740px){
+  .intro__slide{ gap: 24px; }
+  .intro__art  { min-height: 34vh; }
+  .intro__img,
+  .intro__imgsmall { max-height: 46vh; }
+  .intro__footer{ padding-bottom: calc(10px + env(safe-area-inset-bottom)); }
+}

@@ -1,0 +1,104 @@
+/* Layout grid: top copy / flexible spacer / bottom group */
+.signin {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	padding: var(--sp-5);
+	background: var(--white);
+	color: var(--black2);
+}
+
+/* Top copy */
+.signin__copy {
+	max-width: 360px;
+	margin-inline: auto;
+	text-align: center;
+	padding-top: 80px;
+	/* moves the text block down */
+}
+
+.signin__kicker {
+	margin: 0 0 6px;
+	font-size: 20px;
+	line-height: 1.2;
+	font-weight: 400;
+	letter-spacing: 0.3px;
+	color: var(--black);
+}
+
+.signin__headline {
+	margin: 0;
+	font-size: 28px;
+	/* your 28px pink line */
+	line-height: 1.2;
+	font-weight: 600;
+	color: var(--pink);
+}
+
+.signin__headline .rotator-words {
+	color: var(--pink);
+}
+
+/* Spacer pushes bottom group to the bottom */
+.signin__spacer {
+	min-height: 8px;
+}
+
+/* Bottom block pinned to bottom */
+.signin__bottom {
+	display: grid;
+	gap: 32px;
+	max-width: 520px;
+	margin-inline: auto;
+	width: 100%;
+	padding-bottom: 32px;
+}
+
+/* Brand row */
+.signin__brand {
+	display: grid;
+	place-items: center;
+	gap: 10px;
+}
+
+.signin__mark {
+	width: 42px;
+	height: auto;
+	/* prevents squish */
+	display: block;
+}
+
+.signin__sub {
+	margin: 0;
+	font-size: 18px;
+	/* slightly larger per your request */
+	font-weight: 600;
+	color: var(--black2);
+}
+
+/* CTA row */
+.signin__cta {
+	display: grid;
+	gap: 20px;
+}
+
+.signin__link {
+	justify-self: center;
+	font-size: 14px;
+	color: var(--black2);
+	text-decoration: underline;
+}
+
+/* Short screens */
+@media (max-height: 740px) {
+	.signin {
+		padding: var(--sp-4);
+	}
+
+	.signin__headline {
+		font-size: 26px;
+	}
+
+	.signin__sub {
+		font-size: 18px;
+	}
+}
