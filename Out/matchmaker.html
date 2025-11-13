@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Out · Matchmaker</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="styles/screens/matchmaker.css" />
+</head>
+
+<body>
+	<main class="mm-page">
+		<section class="mm-shell">
+			<header class="mm-header">
+				<div class="mm-header-icon" aria-hidden="true">
+					<img src="assets/chat-icon.svg" alt="" class="mm-chat-icon" />
+				</div>
+				<div class="mm-header-text">
+					<h1 class="mm-header-title">Out Matchmaker</h1>
+				</div>
+			</header>
+
+			<section class="mm-chat" aria-live="polite">
+				<div id="mm-messages" class="mm-messages"></div>
+				<div id="mm-quick-replies" class="mm-quick-replies" aria-label="Quick replies"></div>
+			</section>
+
+			<form id="mm-form" class="mm-input-bar" autocomplete="off">
+
+				<div class="mm-input-shell">
+					<input id="mm-input" class="mm-input" type="text" inputmode="text" placeholder="Type your message..." aria-label="Type your message" />
+					<button type="submit" class="mm-send-btn" aria-label="Send message">
+						<span class="mm-send-arrow">↑</span>
+					</button>
+				</div>
+			</form>
+		</section>
+	</main>
+
+	<script src="scripts/matchmaker.js"></script>
+</body>
+
+</html>
