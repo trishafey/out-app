@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Out · Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="styles/screens/home.css" />
+	<link rel="stylesheet" href="styles/screens/profile.css" />
+</head>
+
+<body class="profilePage">
+	<main class="homePage">
+		<div class="homePage__content">
+			<header class="profileHeader">
+				<h1 class="profileHeader__title">Profile</h1>
+				<p class="profileHeader__subtitle">View and update your profile here.</p>
+			</header>
+
+			<!-- Toggle: About me / Preferences -->
+			<div class="profileToggle" role="tablist" aria-label="Profile view" aria-orientation="horizontal">
+				<div class="profileToggle__thumb" aria-hidden="true"></div>
+
+				<button type="button" class="profileToggle__button profileToggle__button--active" data-view="about" role="tab" id="profileTabAbout" aria-selected="true" aria-controls="profileViewAbout">
+					About me
+				</button>
+				<button type="button" class="profileToggle__button" data-view="prefs" role="tab" id="profileTabPrefs" aria-selected="false" aria-controls="profileViewPrefs">
+					Preferences
+				</button>
+			</div>
+
+			<!-- ABOUT ME VIEW -->
+			<div class="profileView profileView--about" id="profileViewAbout" role="tabpanel" aria-labelledby="profileTabAbout">
+
+				<!-- Photos section -->
+				<section class="homeSection profileSection profileSection--photos" aria-labelledby="profile-photos-heading">
+					<h2 id="profile-photos-heading" class="profileSection__title">Photos</h2>
+
+					<div class="profilePhotosGrid">
+						<!-- Slot 1 -->
+						<div class="profilePhotoSlot" data-slot="1">
+							<button type="button" class="profilePhotoSlot__button" data-slot="1">
+								<span class="profilePhotoSlot__inner">
+									<span class="profilePhotoSlot__icon">+</span>
+									<span class="profilePhotoSlot__label">Add photo</span>
+								</span>
+							</button>
+							<input type="file" accept="image/*" id="profilePhotoInput-1" class="profilePhotoSlot__input" data-slot="1" />
+						</div>
+
+						<!-- Slot 2 -->
+						<div class="profilePhotoSlot" data-slot="2">
+							<button type="button" class="profilePhotoSlot__button" data-slot="2">
+								<span class="profilePhotoSlot__inner">
+									<span class="profilePhotoSlot__icon">+</span>
+									<span class="profilePhotoSlot__label">Add photo</span>
+								</span>
+							</button>
+							<input type="file" accept="image/*" id="profilePhotoInput-2" class="profilePhotoSlot__input" data-slot="2" />
+						</div>
+
+						<!-- Slot 3 -->
+						<div class="profilePhotoSlot" data-slot="3">
+							<button type="button" class="profilePhotoSlot__button" data-slot="3">
+								<span class="profilePhotoSlot__inner">
+									<span class="profilePhotoSlot__icon">+</span>
+									<span class="profilePhotoSlot__label">Add photo</span>
+								</span>
+							</button>
+							<input type="file" accept="image/*" id="profilePhotoInput-3" class="profilePhotoSlot__input" data-slot="3" />
+						</div>
+
+						<!-- Slot 4 -->
+						<div class="profilePhotoSlot" data-slot="4">
+							<button type="button" class="profilePhotoSlot__button" data-slot="4">
+								<span class="profilePhotoSlot__inner">
+									<span class="profilePhotoSlot__icon">+</span>
+									<span class="profilePhotoSlot__label">Add photo</span>
+								</span>
+							</button>
+							<input type="file" accept="image/*" id="profilePhotoInput-4" class="profilePhotoSlot__input" data-slot="4" />
+						</div>
+
+						<!-- Slot 5 -->
+						<div class="profilePhotoSlot" data-slot="5">
+							<button type="button" class="profilePhotoSlot__button" data-slot="5">
+								<span class="profilePhotoSlot__inner">
+									<span class="profilePhotoSlot__icon">+</span>
+									<span class="profilePhotoSlot__label">Add photo</span>
+								</span>
+							</button>
+							<input type="file" accept="image/*" id="profilePhotoInput-5" class="profilePhotoSlot__input" data-slot="5" />
+						</div>
+
+						<!-- Slot 6 -->
+						<div class="profilePhotoSlot" data-slot="6">
+							<button type="button" class="profilePhotoSlot__button" data-slot="6">
+								<span class="profilePhotoSlot__inner">
+									<span class="profilePhotoSlot__icon">+</span>
+									<span class="profilePhotoSlot__label">Add photo</span>
+								</span>
+							</button>
+							<input type="file" accept="image/*" id="profilePhotoInput-6" class="profilePhotoSlot__input" data-slot="6" />
+						</div>
+					</div>
+				</section>
+
+				<!-- Basic info -->
+				<section class="homeSection profileSection profileSection--basic" aria-labelledby="profile-basic-heading">
+					<h2 id="profile-basic-heading" class="profileSection__title">Basic info</h2>
+
+					<div class="profileCard">
+						<div class="profileCard__rows">
+							<div class="profileCard__row">
+								<span class="profileCard__label">Name</span>
+								<span class="profileCard__value">Jane Doe</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Age</span>
+								<span class="profileCard__value">32</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Height</span>
+								<span class="profileCard__value">5'9"</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Ethnicity</span>
+								<span class="profileCard__value">White/Caucasian</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Children</span>
+								<span class="profileCard__value">Don’t have children</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Family plans</span>
+								<span class="profileCard__value">Want children</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Pets</span>
+								<span class="profileCard__value">Dog</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Zodiac sign</span>
+								<span class="profileCard__value">Cancer</span>
+							</div>
+						</div>
+
+						<div class="profileCard__footer">
+							<button type="button" class="profileCard__button">Update</button>
+						</div>
+					</div>
+				</section>
+
+				<!-- Identity -->
+				<section class="homeSection profileSection" aria-labelledby="profile-identity-heading">
+					<h2 id="profile-identity-heading" class="profileSection__title">Identity</h2>
+
+					<div class="profileCard">
+						<div class="profileCard__rows">
+							<div class="profileCard__row">
+								<span class="profileCard__label">Gender</span>
+								<span class="profileCard__value">Woman</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Pronouns</span>
+								<span class="profileCard__value">She/her</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Sexuality</span>
+								<span class="profileCard__value">Straight</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Looking for</span>
+								<span class="profileCard__value">Men</span>
+							</div>
+						</div>
+
+						<div class="profileCard__footer">
+							<button type="button" class="profileCard__button">Update</button>
+						</div>
+					</div>
+				</section>
+
+				<!-- Contact info -->
+				<section class="homeSection profileSection" aria-labelledby="profile-contact-heading">
+					<h2 id="profile-contact-heading" class="profileSection__title">Contact info</h2>
+
+					<div class="profileCard">
+						<div class="profileCard__rows">
+							<div class="profileCard__row">
+								<span class="profileCard__label">Email</span>
+								<span class="profileCard__value">jane@janedoe.com</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Phone</span>
+								<span class="profileCard__value">555-555-5555</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Address</span>
+								<span class="profileCard__value">420 E 54th Street, New York, NY</span>
+							</div>
+						</div>
+
+						<div class="profileCard__footer">
+							<button type="button" class="profileCard__button">Update</button>
+						</div>
+					</div>
+				</section>
+
+				<!-- My virtues -->
+				<section class="homeSection profileSection" aria-labelledby="profile-virtues-heading">
+					<h2 id="profile-virtues-heading" class="profileSection__title">My virtues</h2>
+
+					<div class="profileCard">
+						<div class="profileCard__rows">
+							<div class="profileCard__row">
+								<span class="profileCard__label">Work</span>
+								<span class="profileCard__value">FinTech</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Job title</span>
+								<span class="profileCard__value">Sr. UX Designer</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">School</span>
+								<span class="profileCard__value">Wilfrid Laurier & Humber College</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Education</span>
+								<span class="profileCard__value">Undergrad</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Religion</span>
+								<span class="profileCard__value">Catholic</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Hometown</span>
+								<span class="profileCard__value">Toronto, Canada</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Politics</span>
+								<span class="profileCard__value">Liberal-moderate</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Languages</span>
+								<span class="profileCard__value">English, Polish & some French</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Intentions</span>
+								<span class="profileCard__value">Marriage</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Relationship</span>
+								<span class="profileCard__value">Monogamous</span>
+							</div>
+						</div>
+
+						<div class="profileCard__footer">
+							<button type="button" class="profileCard__button">Update</button>
+						</div>
+					</div>
+				</section>
+
+				<!-- My vices -->
+				<section class="homeSection profileSection" aria-labelledby="profile-vices-heading">
+					<h2 id="profile-vices-heading" class="profileSection__title">My vices</h2>
+
+					<div class="profileCard">
+						<div class="profileCard__rows">
+							<div class="profileCard__row">
+								<span class="profileCard__label">Drinking</span>
+								<span class="profileCard__value">Socially</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Smoking</span>
+								<span class="profileCard__value">No</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Marijuana</span>
+								<span class="profileCard__value">Sometimes</span>
+							</div>
+							<div class="profileCard__row">
+								<span class="profileCard__label">Drugs</span>
+								<span class="profileCard__value">No</span>
+							</div>
+						</div>
+
+						<div class="profileCard__footer">
+							<button type="button" class="profileCard__button">Update</button>
+						</div>
+					</div>
+				</section>
+			</div>
+
+			<!-- PREFERENCES VIEW -->
+			<div class="profileView profileView--prefs" id="profileViewPrefs" role="tabpanel" aria-labelledby="profileTabPrefs" hidden>
+				<section class="homeSection profileSection profileSection--preferences" aria-labelledby="profile-prefs-heading">
+					<h2 id="profile-prefs-heading" class="profileSection__title">Preferences</h2>
+
+					<div class="profilePrefs">
+						<!-- Must have -->
+						<article class="profilePrefsCard">
+							<h3 class="profilePrefsCard__title">Must have</h3>
+							<div class="profilePrefsCard__tags">
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Christian</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Tall: 6'+</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Marriage minded</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Kind</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Smart</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Ambitious</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Want kids</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Monogamy</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">White/Caucasian</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+							</div>
+							<button type="button" class="profilePrefsCard__add">+</button>
+						</article>
+
+						<!-- Nice to have -->
+						<article class="profilePrefsCard">
+							<h3 class="profilePrefsCard__title">Nice to have</h3>
+							<div class="profilePrefsCard__tags">
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">College graduate</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Drinks socially</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Athletic</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Blue/Green eyes</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+							</div>
+							<button type="button" class="profilePrefsCard__add">+</button>
+						</article>
+
+						<!-- Open to -->
+						<article class="profilePrefsCard">
+							<h3 class="profilePrefsCard__title">Open to</h3>
+							<div class="profilePrefsCard__tags">
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">All religions</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">All races</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Bi-sexuality</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Pets</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Kids</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+							</div>
+							<button type="button" class="profilePrefsCard__add">+</button>
+						</article>
+
+						<!-- Don’t want -->
+						<article class="profilePrefsCard">
+							<h3 class="profilePrefsCard__title">Don’t want</h3>
+							<div class="profilePrefsCard__tags">
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Undecided dating goals</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Pets</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Smoker</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Drug user</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Divorced</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+								<button type="button" class="profileTag">
+									<span class="profileTag__label">Crypto guy</span>
+									<span class="profileTag__remove" aria-hidden="true">×</span>
+								</button>
+							</div>
+							<button type="button" class="profilePrefsCard__add">+</button>
+						</article>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<nav class="homeNav" aria-label="Primary navigation">
+			<a href="home.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-home.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Home</span>
+			</a>
+			<a href="upcoming.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-calendar.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Upcoming</span>
+			</a>
+			<a href="profile.html" class="homeNav__item homeNav__item--active">
+				<img class="homeNav__icon" src="assets/icon-profile.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Profile</span>
+			</a>
+			<a href="settings.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-settings.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Settings</span>
+			</a>
+		</nav>
+
+		<div class="homeNav__fabShell">
+			<a href="matchmaker.html" class="homeNav__fab" id="openMatchmakerFromProfile">
+				<img src="assets/icon-sparkle-pink.svg" alt="Open matchmaker" class="homeNav__fabLogo" />
+			</a>
+		</div>
+	</main>
+
+	<script src="scripts/profile.js"></script>
+</body>
+
+</html>

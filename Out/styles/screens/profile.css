@@ -1,0 +1,302 @@
+/* Profile page layout */
+
+/* Turn off the "preview" flex centering just for the profile page */
+body.profilePage {
+	display: block;
+}
+
+/* Make the content behave like a normal block so the whole page can scroll */
+.profilePage .homePage__content {
+	flex: 0 0 auto;      /* override flex: 1 from home.css */
+	overflow: visible;   /* let the outer page handle scrolling */
+	padding-top: 0;      /* header controls its own spacing */
+}
+
+.profileHeader {
+	max-width: 360px;
+	margin: 32px auto var(--sp-3);
+}
+
+.profileHeader__title {
+	margin: 0 0 4px;
+	font-size: 24px;
+	line-height: 1.2;
+	font-weight: 600;
+}
+
+.profileHeader__subtitle {
+	margin: 0;
+	font-size: 14px;
+	line-height: 1.4;
+	color: rgba(10, 10, 10, 0.6);
+}
+
+/* Toggle (About me / Preferences) */
+
+.profileToggle {
+	max-width: 360px;
+	margin: 0 auto var(--sp-4);
+	padding: 4px;
+	border-radius: 999px;
+	background: rgba(10, 10, 10, 0.04);
+	display: flex;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+}
+
+.profileToggle__thumb {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	height: calc(100% - 8px);
+	border-radius: 999px;
+	background: var(--white);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+	transition:
+		left 0.22s ease,
+		width 0.22s ease;
+	z-index: 0;
+}
+
+.profileToggle__button {
+	flex: 1;
+	border: 0;
+	background: transparent;
+	border-radius: 999px;
+	padding: 10px 16px;
+	font-size: 16px;
+	line-height: 1.3;
+	font-weight: 500;
+	color: rgba(10, 10, 10, 0.6);
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+}
+
+.profileToggle__button--active {
+	color: var(--black2);
+}
+
+/* Views */
+
+.profileView {
+	max-width: 360px;
+	margin: 0 auto;
+}
+
+/* Sections */
+
+.profileSection {
+	margin: 0 0 var(--sp-4);
+}
+
+.profileSection__title {
+	margin: 0 0 var(--sp-2);
+	font-size: 16px;
+	line-height: 1.3;
+	font-weight: 600;
+}
+
+/* Photos section */
+
+.profileSection--photos {
+	margin-top: 0;
+}
+
+.profilePhotosGrid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--sp-2);
+}
+
+.profilePhotoSlot {
+	position: relative;
+}
+
+.profilePhotoSlot__button {
+	position: relative;
+	width: 100%;
+	padding-top: 100%;
+	border-radius: 18px;
+	border: 1px solid #D0D0D5;
+	background: rgba(10, 10, 10, 0.04);
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.profilePhotoSlot__inner {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+}
+
+.profilePhotoSlot__icon {
+	display: block;
+	font-size: 24px;
+	line-height: 1;
+	margin-bottom: 4px;
+	color: rgba(10, 10, 10, 0.6);
+}
+
+.profilePhotoSlot__label {
+	font-size: 12px;
+	line-height: 1.3;
+	color: rgba(10, 10, 10, 0.65);
+	text-align: center;
+}
+
+/* Visually hidden file input */
+
+.profilePhotoSlot__input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+/* When a photo is chosen, use it as background */
+
+.profilePhotoSlot__button--hasImage {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.profilePhotoSlot__button--hasImage .profilePhotoSlot__inner {
+	opacity: 0;
+}
+
+/* Generic profile cards (Basic info, Identity, etc.) */
+
+.profileCard {
+	margin-top: var(--sp-2);
+	padding: var(--sp-4);
+	border-radius: 20px;
+	background: var(--white);
+	border: 1px solid #D0D0D5;
+}
+
+.profileCard__rows {
+	margin-bottom: var(--sp-3);
+}
+
+.profileCard__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	margin-bottom: 6px;
+}
+
+.profileCard__row:last-child {
+	margin-bottom: 0;
+}
+
+.profileCard__label {
+	font-size: 14px;
+	line-height: 1.4;
+	color: rgba(10, 10, 10, 0.6);
+}
+
+.profileCard__value {
+	font-size: 15px;
+	line-height: 1.4;
+	font-weight: 500;
+	color: var(--black2);
+	text-align: right;
+}
+
+.profileCard__footer {
+	margin-top: var(--sp-2);
+	display: flex;
+	justify-content: center;
+}
+
+.profileCard__button {
+	width: 100%;
+	max-width: 240px;
+	padding: 12px 20px;
+	border-radius: 999px;
+	border: 1px solid var(--black2);
+	background: transparent;
+	color: var(--black2);
+	font-size: 15px;
+	line-height: 1.3;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+/* Preferences */
+
+.profileSection--preferences {
+	margin-top: 0;
+}
+
+.profilePrefs {
+	display: flex;
+	flex-direction: column;
+	gap: var(--sp-3);
+}
+
+.profilePrefsCard {
+	padding: var(--sp-3);
+	border-radius: 20px;
+	background: var(--white);
+	border: 1px solid #D0D0D5;
+}
+
+.profilePrefsCard__title {
+	margin: 0 0 var(--sp-2);
+	font-size: 14px;
+	line-height: 1.3;
+	font-weight: 600;
+}
+
+.profilePrefsCard__tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-bottom: var(--sp-2);
+}
+
+.profileTag {
+	display: inline-flex;
+	align-items: center;
+	padding: 6px 10px;
+	border-radius: 999px;
+	background: rgba(10, 10, 10, 0.06);
+	font-size: 13px;
+	line-height: 1.3;
+	color: var(--black2);
+	border: 0;
+	cursor: pointer;
+}
+
+.profileTag__label {
+	margin-right: 6px;
+}
+
+.profileTag__remove {
+	font-size: 14px;
+	line-height: 1;
+}
+
+.profilePrefsCard__add {
+	margin-top: 4px;
+	padding: 0;
+	border: 0;
+	background: none;
+	font-size: 20px;
+	line-height: 1;
+	cursor: pointer;
+	color: rgba(10, 10, 10, 0.7);
+}

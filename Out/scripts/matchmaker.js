@@ -369,6 +369,7 @@
 			}
 		},
 
+		
 		finalChoice: {
 			expects: "choice",
 			options: [{
@@ -385,6 +386,9 @@
 			async onUserInput({ session }, value) {
 				session.finalChoice = value;
 				console.log("Final choice:", value, "session:", session);
+
+				// Send the user to the Home screen after onboarding
+				window.location.href = "home.html";
 			}
 		}
 	};

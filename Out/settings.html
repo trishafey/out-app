@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Out · Settings</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="styles/screens/home.css" />
+	<link rel="stylesheet" href="styles/screens/settings.css" />
+</head>
+
+<body>
+	<main class="homePage">
+		<div class="homePage__content">
+			<header class="settingsHeader">
+				<h1 class="settingsHeader__title">Settings</h1>
+				<p class="settingsHeader__subtitle">View and update your settings here.</p>
+			</header>
+
+			<nav class="settingsList" aria-label="Settings">
+				<button type="button" class="settingsListItem">
+					<span class="settingsListItem__meta">
+						<span class="settingsListItem__icon" aria-hidden="true">♡</span>
+						<span class="settingsListItem__label">Account</span>
+					</span>
+				</button>
+
+				<button type="button" class="settingsListItem">
+					<span class="settingsListItem__meta">
+						<span class="settingsListItem__icon" aria-hidden="true">↥</span>
+						<span class="settingsListItem__label">Match Preferences</span>
+					</span>
+				</button>
+
+				<button type="button" class="settingsListItem">
+					<span class="settingsListItem__meta">
+						<span class="settingsListItem__icon" aria-hidden="true">⚙︎</span>
+						<span class="settingsListItem__label">Notifications</span>
+					</span>
+				</button>
+
+				<button type="button" class="settingsListItem">
+					<span class="settingsListItem__meta">
+						<span class="settingsListItem__icon" aria-hidden="true">🔔</span>
+						<span class="settingsListItem__label">Safety</span>
+					</span>
+				</button>
+
+				<button type="button" class="settingsListItem">
+					<span class="settingsListItem__meta">
+						<span class="settingsListItem__icon" aria-hidden="true">💬</span>
+						<span class="settingsListItem__label">Contact Support</span>
+					</span>
+				</button>
+
+				<button type="button" class="settingsListItem">
+					<span class="settingsListItem__meta">
+						<span class="settingsListItem__icon" aria-hidden="true">👥</span>
+						<span class="settingsListItem__label">Legal</span>
+					</span>
+				</button>
+			</nav>
+
+			<div class="settingsAskChat">
+				<button type="button" class="btn btn-primary settingsAskChat__button">
+					Ask chat
+				</button>
+			</div>
+		</div>
+
+		<nav class="homeNav" aria-label="Primary navigation">
+			<a href="home.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-home.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Home</span>
+			</a>
+			<a href="upcoming.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-calendar.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Upcoming</span>
+			</a>
+			<a href="profile.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-profile.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Profile</span>
+			</a>
+			<a href="settings.html" class="homeNav__item homeNav__item--active">
+				<img class="homeNav__icon" src="assets/icon-settings.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Settings</span>
+			</a>
+		</nav>
+
+		<div class="homeNav__fabShell">
+			<a href="matchmaker.html" class="homeNav__fab" id="openMatchmakerFromSettings">
+				<img src="assets/icon-sparkle-pink.svg" alt="Open matchmaker" class="homeNav__fabLogo" />
+			</a>
+		</div>
+	</main>
+</body>
+
+</html>

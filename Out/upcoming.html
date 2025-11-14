@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Out · Upcoming</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="styles/screens/home.css" />
+	<link rel="stylesheet" href="styles/screens/upcoming.css" />
+</head>
+
+<body>
+	<main class="homePage">
+		<div class="homePage__content">
+
+			<header class="upcomingHeader">
+				<h1 class="upcomingHeader__title">Upcoming</h1>
+				<p class="upcomingHeader__subtitle">View and manage your upcoming dates.</p>
+			</header>
+
+			<!-- Toggle -->
+			<div class="upcomingToggle" role="tablist" aria-label="Date type">
+				<div class="upcomingToggle__thumb" aria-hidden="true"></div>
+
+				<button type="button" class="upcomingToggle__button upcomingToggle__button--active" data-view="solo" role="tab" aria-selected="true">
+					Solo dates
+				</button>
+				<button type="button" class="upcomingToggle__button" data-view="group" role="tab" aria-selected="false">
+					Group dates
+				</button>
+			</div>
+
+			<section class="homeSection upcomingSection" aria-labelledby="upcoming-heading">
+				<h1 id="upcoming-heading" class="homeSection__title">Upcoming dates</h1>
+
+				<div class="upcomingCards" id="upcomingCardsShell">
+
+					<!-- SOLO CARD -->
+					<div class="upcomingCard upcomingCard--active" id="upcomingSoloCard" aria-hidden="false">
+						<h2 class="upcomingCard__title">Future dates will appear here</h2>
+						<p class="upcomingCard__body">
+							Talk to your matchmaker to find a match!
+						</p>
+						<button type="button" class="upcomingCard__cta">
+							Find a match now
+						</button>
+					</div>
+
+					<!-- GROUP CARD -->
+					<div class="upcomingCard upcomingCard--inactive" id="upcomingGroupCard" aria-hidden="true">
+						<h2 class="upcomingCard__title">Try a group date!</h2>
+						<p class="upcomingCard__body">Your matchmaker will find 6+ people for a group date.</p>
+						<p class="upcomingCard__body">Based on your preferences, it might be something like a dinner party, gallery night, or volleyball game.</p>
+						<p class="upcomingCard__body">Everyone invited is a match on paper. You see if there’s a spark in real life.</p>
+						<p class="upcomingCard__body upcomingCard__body--emphasis">
+							Get out of the apps and date in real life
+						</p>
+						<button type="button" class="upcomingCard__cta">
+							Find me a group date
+						</button>
+					</div>
+
+				</div>
+
+				<!-- Future upcoming & RSVP pending rendered here -->
+				<div class="upcomingList upcomingList--solo" id="upcomingListSolo" hidden></div>
+				<div class="upcomingList upcomingList--group" id="upcomingListGroup" hidden></div>
+			</section>
+		</div> <!-- end .homePage__content -->
+
+		<!-- NAV -->
+		<nav class="homeNav" aria-label="Primary navigation">
+			<a href="home.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-home.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Home</span>
+			</a>
+
+			<a href="upcoming.html" class="homeNav__item homeNav__item--active">
+				<img class="homeNav__icon" src="assets/icon-calendar.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Upcoming</span>
+			</a>
+
+			<a href="profile.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-profile.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Profile</span>
+			</a>
+
+			<a href="settings.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-settings.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Settings</span>
+			</a>
+		</nav>
+
+		<!-- FAB -->
+		<!-- FAB -->
+		<div class="homeNav__fabShell">
+			<a href="matchmaker.html" class="homeNav__fab" id="openMatchmakerFromUpcoming">
+				<img src="assets/icon-sparkle-pink.svg" alt="Open matchmaker" class="homeNav__fabLogo" />
+			</a>
+		</div>
+
+	</main>
+
+	<script src="scripts/upcoming.js"></script>
+</body>
+
+</html>

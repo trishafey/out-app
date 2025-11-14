@@ -54,13 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
   slides.forEach((slide, idx) => {
     const btn = slide.querySelector(".intro__btn");
     if (!btn) return;
-    btn.addEventListener("click", () => {
+    
+		    btn.addEventListener("click", () => {
       if (idx < slides.length - 1) {
         showIntroSlide(idx + 1);
       } else {
-        // finished onboarding – stub
-        // e.g., window.location.href = '/home.html'
-        alert("Onboarding finished!");
+        // finished onboarding – go to Matchmaker chat
+        window.location.href = "matchmaker.html";
       }
     });
   });
