@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Out · Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+	<link rel="stylesheet" href="styles/main.css" />
+	<link rel="stylesheet" href="styles/screens/home.css" />
+</head>
+
+<body>
+	<main class="homePage">
+		<div class="homePage__content">
+			<header class="homeHeader">
+				<h1 class="homeHeader__title">
+					Good morning,
+					<span class="homeHeader__name" id="homeUserName">Jane</span>
+					<span class="homeHeader__sparkle" aria-hidden="true">✨</span>
+				</h1>
+				<p class="homeHeader__subtitle">
+					I just need a few more details so I can start lining up your first matches.
+				</p>
+			</header>
+
+			<section class="homeSection homeSection--next" aria-labelledby="home-next-heading">
+				<h2 id="home-next-heading" class="homeSection__title">What’s next</h2>
+
+				<div class="homeCards">
+					<button class="homeCard" type="button" id="homeTaskAddPhotos" data-home-task="add-photos">
+						<div class="homeCard__inner">
+							<div class="homeCard__text">
+								<p class="homeCard__title">Add 6 pictures to your profile</p>
+								<p class="homeCard__meta">More photos = better matches</p>
+							</div>
+							<img class="homeCard__chevron" src="assets/icon-right-arrow.svg" alt="" aria-hidden="true" />
+						</div>
+					</button>
+
+					<button class="homeCard" type="button" id="homeTaskPerfectMatch" data-home-task="perfect-match">
+						<div class="homeCard__inner">
+							<div class="homeCard__text">
+								<p class="homeCard__title">Tell me about your perfect match</p>
+								<p class="homeCard__meta">Recommended • Est. 3 mins</p>
+							</div>
+							<img class="homeCard__chevron" src="assets/icon-right-arrow.svg" alt="" aria-hidden="true" />
+						</div>
+					</button>
+
+					<button class="homeCard" type="button" id="homeTaskWhereToDate" data-home-task="where-to-date">
+						<div class="homeCard__inner">
+							<div class="homeCard__text">
+								<p class="homeCard__title">Where you would like to date</p>
+								<p class="homeCard__meta">
+									Helps me plan the perfect date spot • Est. 2 mins
+								</p>
+							</div>
+							<img class="homeCard__chevron" src="assets/icon-right-arrow.svg" alt="" aria-hidden="true" />
+						</div>
+					</button>
+				</div>
+			</section>
+		</div>
+
+		<nav class="homeNav" aria-label="Primary navigation">
+			<a href="home.html" class="homeNav__item homeNav__item--active">
+				<img class="homeNav__icon" src="assets/icon-home.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Home</span>
+			</a>
+			<a href="upcoming.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-calendar.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Upcoming</span>
+			</a>
+			<a href="profile.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-profile.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Profile</span>
+			</a>
+			<a href="settings.html" class="homeNav__item">
+				<img class="homeNav__icon" src="assets/icon-settings.svg" alt="" aria-hidden="true" />
+				<span class="homeNav__label">Settings</span>
+			</a>
+		</nav>
+
+		<div class="homeNav__fabShell">
+			<div class="homeNav__fabHint" id="homeFabHint" data-hint-id="home-fab">
+				Message your matchmaker anytime — just tap the circle
+			</div>
+			<a href="matchmaker.html" class="homeNav__fab" id="openMatchmakerFromHome">
+				<img src="assets/icon-sparkle-pink.svg" alt="Open matchmaker" class="homeNav__fabLogo" />
+			</a>
+		</div>
+
+	</main>
+</body>
+
+</html>

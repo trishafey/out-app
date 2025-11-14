@@ -1,0 +1,80 @@
+/* CSS reset-ish */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+	color: var(--black2);
+	background: var(--white);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+button {
+	font: inherit;
+}
+
+/* Fullscreen screen base */
+.screen {
+	position: fixed;
+	inset: 0;
+}
+
+/* only show screens that aren't hidden */
+[hidden] {
+	display: none !important;
+}
+
+.screen {
+	display: none;
+	position: fixed;
+	inset: 0;
+}
+
+.screen:not([hidden]) {
+	display: grid;
+}
+
+
+/* ===== PREVIEW ONLY (for iPad Safari) ===== */
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Phone stage for preview */
+.phone {
+  position: relative;
+  width: 375px;
+  height: 812px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #121111;
+  box-shadow: 0 12px 28px rgba(0,0,0,.25);
+}
+
+/* Let all screens fit the phone, not the whole iPad */
+.screen {
+  position: absolute;
+  inset: 0;
+}
